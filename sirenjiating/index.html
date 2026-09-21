@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>私人家庭影院 - 沉浸式视听体验与专业设备选购指南</title>
+    <meta name="description" content="私人家庭影院专业指南：包含客厅影院设计方案、投影仪与激光电视对比、音响系统配置及避坑建议。提供从入门到发烧级的设备选购与搭建教程。">
+    <meta name="keywords" content="私人家庭影院, 家庭影院搭建, 投影仪推荐, 激光电视, 家庭音响系统, 背景音乐系统">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #1a1a2e;
+            --accent-color: #e94560;
+            --text-color: #333;
+            --text-light: #666;
+            --bg-light: #f8f9fa;
+            --card-bg: #ffffff;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+            --header-height: 70px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #fff;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* Layout Utilities */
+        .container {
+            width: 100%;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section {
+            padding: 4rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--accent-color);
+            margin: 0.5rem auto 0;
+            border-radius: 2px;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        header {
+            height: var(--header-height);
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            display: flex;
+            align-items: center;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-color);
+            font-size: 1rem;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        .cta-btn {
+            background-color: var(--accent-color);
+            color: #fff;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .cta-btn:hover {
+            background-color: #d1364e;
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: var(--header-height);
+            height: 85vh;
+            background: linear-gradient(rgba(26, 26, 46, 0.7), rgba(26, 26, 46, 0.7)), 
+                        url('https://picsum.photos/seed/homecinema/1920/1080') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            padding: 0 1rem;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #fff;
+            color: #fff;
+            padding: 0.6rem 1.8rem;
+            border-radius: 50px;
+            font-weight: 600;
+        }
+
+        .btn-outline:hover {
+            background: #fff;
+            color: var(--primary-color);
+        }
+
+        /* Core Concepts Section */
+        .concepts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .concept-card {
+            background: var(--bg-light);
+            padding: 2rem;
+            border-radius: 12px;
+            transition: transform 0.3s;
+        }
+
+        .concept-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .concept-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+        }
+
+        .concept-card h3 {
+            margin-bottom: 0.8rem;
+            font-size: 1.25rem;
+        }
+
+        .concept-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Equipment Comparison Section */
+        .comparison-wrapper {
+            background-color: var(--primary-color);
+            color: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .comparison-table-container {
+            flex: 1;
+            min-width: 300px;
+            padding: 3rem;
+        }
+
+        .comparison-title {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 1rem;
+        }
+
+        .comparison-list li {
+            margin-bottom: 1.5rem;
+        }
+
+        .comparison-list h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: #fff;
+        }
+
+        .comparison-list p {
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        .comparison-visual {
+            flex: 1;
+            min-width: 300px;
+            background: rgba(255,255,255,0.05);
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .device-img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 8px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        /* Design Guide Section */
+        .guide-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .step-item {
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+        }
+
+        .step-number {
+            background-color: var(--accent-color);
+            color: #fff;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            flex-shrink: 0;
+            margin-top: 5px;
+        }
+
+        .step-content h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .step-content p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* FAQ Section */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        details {
+            background: var(--bg-light);
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        summary {
+            padding: 1.2rem;
+            cursor: pointer;
+            font-weight: 600;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            transition: transform 0.3s;
+        }
+
+        details[open] summary::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-content {
+            padding: 0 1.2rem 1.2rem;
+            color: var(--text-light);
+            border-top: 1px solid #eee;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #111;
+            color: #888;
+            padding: 4rem 0 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h4 {
+            color: #fff;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col a:hover {
+            color: var(--accent-color);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #333;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            nav {
+                display: none; /* Simplified for this single-file demo */
+            }
+
+            .comparison-wrapper {
+                flex-direction: column;
+            }
+            
+            .comparison-visual {
+                order: -1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <a href="#" class="logo">
+                <span>◆</span> HomeCinema
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#concepts">核心概念</a></li>
+                    <li><a href="#equipment">设备选购</a></li>
+                    <li><a href="#design">搭建指南</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <a href="#contact" class="cta-btn">获取方案</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>私人家庭影院</h1>
+                <p>告别电影院拥挤与嘈杂，在家中打造专属的沉浸式视听空间。从投影仪选型到声学装修，一站式指南助您实现私人影院梦想。</p>
+                <div class="hero-buttons">
+                    <a href="#equipment" class="cta-btn">开始选购</a>
+                    <a href="#design" class="btn-outline">了解搭建</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Concepts Section -->
+        <section id="concepts" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>什么是私人家庭影院？</h2>
+                    <p>私人家庭影院不仅是一套视听设备，更是一种生活方式。通过专业的声学处理和影像处理技术，在有限的空间内还原影院级别的观影体验。</p>
+                </div>
+                <div class="concepts-grid">
+                    <article class="concept-card">
+                        <div class="concept-icon">🎬</div>
+                        <h3>视听同步</h3>
+                        <p>通过专业的家庭影院处理器（AVR），实现音画同步，确保声音与画面完美配合，增强临场感。</p>
+                    </article>
+                    <article class="concept-card">
+                        <div class="concept-icon">🎨</div>
+                        <h3>环境光控制</h3>
+                        <p>投影仪依赖环境光控制，通过遮光窗帘、吸音板和深色墙面，消除杂光干扰，提升画面对比度和亮度。</p>
+                    </article>
+                    <article class="concept-card">
+                        <div class="concept-icon">🔊</div>
+                        <h3>声场定位</h3>
+                        <p>利用多声道环绕声系统（如5.1.2或7.1.4），配合低音炮，营造360度环绕的沉浸式声音体验。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Equipment Comparison Section -->
+        <section id="equipment" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>核心设备选购指南</h2>
+                    <p>构建私人家庭影院，选择正确的设备是成功的第一步。以下是主流显示设备的对比分析。</p>
+                </div>
+
+                <div class="comparison-wrapper">
+                    <div class="comparison-table-container">
+                        <h3 class="comparison-title">主流显示设备对比</h3>
+                        <ul class="comparison-list">
+                            <li>
+                                <h4>激光电视</h4>
+                                <p>利用超短焦投影技术，投屏尺寸可达100寸以上。拥有高亮度和护眼特性，适合白天观看。需搭配抗光幕布，对环境光要求相对较低。</p>
+                            </li>
+                            <li>
+                                <h4>传统投影仪</h4>
+                                <p>性价比高，画质细腻度优于普通电视。但亮度较低，需要完全黑暗环境。适合夜间或装修标准较高的房间。</p>
+                            </li>
+                            <li>
+                                <h4>智能投影仪</h4>
+                                <p>内置安卓系统，无需外接播放器即可直接上网看片。适合租房族或空间较小的用户，操作便捷。</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="comparison-visual">
+                        <img src="https://picsum.photos/seed/projector/400/300" alt="投影仪展示图" class="device-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Design Guide Section -->
+        <section id="design" class="section" style="background-color: var(--bg-light);">
+            <div class="container">
+                <div class="section-header">
+                    <h2>客厅影院搭建步骤</h2>
+                    <p>从零开始，一步步规划您的私人影院空间。</p>
+                </div>
+
+                <div class="guide-steps">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>空间规划与声学处理</h3>
+                            <p>首先确定观影距离和最佳投屏尺寸。在装修阶段，务必预留AV设备柜空间。墙面和天花板建议使用吸音材料（如聚酯纤维板）或进行软包处理，以减少驻波和声反射，提升声音纯净度。</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>影音设备连接与调试</h3>
+                            <p>使用HDMI 2.1线缆连接播放器、投影仪和功放，确保支持4K 120Hz信号传输。连接完成后，需进行校准，包括开启投影仪的HDR模式、调整色彩模式和声道的电平平衡。</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>舒适性与氛围营造</h3>
+                            <p>舒适的观影体验离不开人体工学座椅。建议选择带有电动调节、按摩功能的沙发或影院专用座椅。同时，安装环境氛围灯（LED灯带）可以减轻眼睛疲劳，营造观影氛围。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>常见问题解答</h2>
+                    <p>关于私人家庭影院搭建的疑问与解答。</p>
+                </div>
+                <div class="faq-container">
+                    <details>
+                        <summary>普通客厅能做家庭影院吗？</summary>
+                        <div class="faq-content">
+                            可以，但需要做一定程度的声学改造。如果无法进行墙面软包，可以通过在墙面悬挂厚窗帘、放置书架（书架上有书）等方式来增加吸音效果，减少回声。
+                        </div>
+                    </details>
+                    <details>
+                        <summary>家庭影院需要多大的投影仪亮度？</summary>
+                        <div class="faq-content">
+                            这取决于房间采光。如果房间有窗户且白天观看，建议选择3000 ANSI流明以上的激光电视或高亮度投影仪。如果仅在夜间观看，1000-2000 ANSI流明即可满足需求。
+                        </div>
+                    </details>
+                    <details>
+                        <summary>5.1声道够用吗？</summary>
+                        <div class="faq-content">
+                            对于大多数家庭用户，5.1声道（前置、中置、后环绕、低音炮）已经能够提供非常不错的观影体验。如果预算充足且追求极致沉浸感，可以选择7.1.2或杜比全景声系统。
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#" class="logo" style="margin-bottom: 1rem; display:inline-block;">
+                        <span>◆</span> HomeCinema
+                    </a>
+                    <p style="font-size: 0.9rem;">专注分享家庭影院搭建知识，为您提供专业的设备选购建议与声学设计思路。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#concepts">核心概念</a></li>
+                        <li><a href="#equipment">设备选购</a></li>
+                        <li><a href="#design">搭建指南</a></li>
+                        <li><a href="#faq">常见问题</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>相关资源</h4>
+                    <ul>
+                        <li><a href="#">HDMI线材选购</a></li>
+                        <li><a href="#">吸音板安装教程</a></li>
+                        <li><a href="#">投影幕布参数详解</a></li>
+                        <li><a href="#">家庭影院布线规范</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li>邮箱: support@homecinema.example</li>
+                        <li>电话: 400-123-4567</li>
+                        <li>地址: 科技园区创意大道88号</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 HomeCinema Guide. All rights reserved. 本网站内容仅供学习与参考，不作为商业承诺。</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
