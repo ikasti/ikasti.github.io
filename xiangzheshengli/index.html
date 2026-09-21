@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="向着胜利前进全集在线阅读，提供高清漫画图片、章节列表、更新时间及角色介绍。收录热血战斗、冒险、军事题材漫画，支持手机端与PC端访问。">
+    <meta name="keywords" content="向着胜利前进全集,向着胜利前进,热血漫画,战斗漫画,在线漫画阅读">
+    <title>向着胜利前进全集-热血战斗漫画在线阅读与资源导航</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #e63946;
+            --secondary-color: #1d3557;
+            --accent-color: #457b9d;
+            --bg-color: #f1faee;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-sub: #666666;
+            --spacing-unit: 16px;
+            --border-radius: 8px;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--secondary-color);
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            font-size: 1rem;
+            opacity: 0.9;
+            transition: var(--transition);
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+
+        nav a:hover, nav a.active {
+            opacity: 1;
+            background-color: rgba(255,255,255,0.1);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .stat-number {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Main Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px var(--spacing-unit);
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+        }
+
+        /* Section Styles */
+        section {
+            margin-bottom: 50px;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 12px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            position: relative;
+            padding-left: 12px;
+        }
+
+        .section-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 6px;
+            height: 24px;
+            background-color: var(--primary-color);
+            border-radius: 3px;
+        }
+
+        .view-all {
+            font-size: 0.9rem;
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+
+        .view-all:hover {
+            text-decoration: underline;
+        }
+
+        /* Chapter List */
+        .chapter-list {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .chapter-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 20px;
+            border-bottom: 1px solid #f0f0f0;
+            transition: var(--transition);
+        }
+
+        .chapter-item:last-child {
+            border-bottom: none;
+        }
+
+        .chapter-item:hover {
+            background-color: #fafafa;
+        }
+
+        .chapter-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .chapter-title {
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .chapter-meta {
+            font-size: 0.85rem;
+            color: var(--text-sub);
+            margin-top: 4px;
+        }
+
+        .chapter-status {
+            font-size: 0.85rem;
+            padding: 4px 10px;
+            border-radius: 20px;
+            background-color: #e0f2f1;
+            color: #00695c;
+            font-weight: 500;
+        }
+
+        .chapter-status.read {
+            background-color: #e3f2fd;
+            color: #1565c0;
+        }
+
+        /* Sidebar */
+        aside .widget {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 24px;
+            margin-bottom: 30px;
+        }
+
+        .widget-title {
+            font-size: 1.1rem;
+            margin-bottom: 16px;
+            color: var(--secondary-color);
+            border-left: 4px solid var(--primary-color);
+            padding-left: 10px;
+        }
+
+        .character-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+            gap: 15px;
+        }
+
+        .char-card {
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .char-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #eee;
+            margin: 0 auto 8px;
+            overflow: hidden;
+            border: 2px solid #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .char-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .char-name {
+            font-size: 0.85rem;
+            color: var(--text-main);
+        }
+
+        .tags-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            background-color: #f0f0f0;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            color: var(--text-sub);
+            transition: var(--transition);
+        }
+
+        .tag:hover {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        /* Info Grid */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            background: var(--card-bg);
+            padding: 24px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .info-item strong {
+            display: block;
+            color: var(--text-sub);
+            font-size: 0.9rem;
+            margin-bottom: 4px;
+        }
+
+        .info-item span {
+            color: var(--text-main);
+            font-weight: 500;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            color: rgba(255,255,255,0.7);
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .footer-links {
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .copyright {
+            font-size: 0.85rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-container {
+                padding: 0 10px;
+            }
+
+            nav {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: var(--secondary-color);
+                padding: 10px;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+
+            nav.active {
+                display: block;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 0;
+            }
+
+            nav a {
+                display: block;
+                padding: 12px 10px;
+                border-bottom: 1px solid rgba(255,255,255,0.05);
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .container {
+                grid-template-columns: 1fr;
+                padding: 20px 10px;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .chapter-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .chapter-status {
+                align-self: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <a href="#" class="logo">漫画<span>先锋</span></a>
+        <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="#" class="active">首页</a></li>
+                <li><a href="#">排行榜</a></li>
+                <li><a href="#">分类浏览</a></li>
+                <li><a href="#">全本专区</a></li>
+                <li><a href="#">关于我们</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <h1>向着胜利前进全集</h1>
+        <p>这是一部集热血、战斗与成长于一体的军事题材漫画。讲述了一群身怀绝技的战士在绝境中寻找希望，向着胜利不断前进的感人故事。</p>
+        <div class="hero-stats">
+            <div class="stat-item">
+                <span class="stat-number">240+</span>
+                <span class="stat-label">连载章节</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">98%</span>
+                <span class="stat-label">读者好评</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">HD</span>
+                <span class="stat-label">高清画质</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- Main Content Area -->
+        <div class="content-area">
+            <!-- Synopsis -->
+            <section>
+                <div class="section-header">
+                    <h2 class="section-title">作品简介</h2>
+                </div>
+                <article style="background: var(--card-bg); padding: 24px; border-radius: var(--border-radius); box-shadow: var(--shadow);">
+                    <p>故事发生在一个被战争阴云笼罩的世界。主角林峰原本只是普通的一名士兵，但在一次意外中觉醒了特殊的战斗天赋。面对强敌环伺和国家的危机，他带领着战友们，在枪林弹雨中开辟出一条通往胜利的道路。</p>
+                    <br>
+                    <p>作品以紧凑的剧情和细腻的人物刻画著称，展现了战争对人性的考验，以及友情、爱情和家国情怀的深刻内涵。每一场战斗都惊心动魄，每一次抉择都关乎生死。</p>
+                </article>
+            </section>
+
+            <!-- Info Grid -->
+            <section>
+                <div class="section-header">
+                    <h2 class="section-title">作品档案</h2>
+                </div>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <strong>作者</strong>
+                        <span>烽火连天</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>状态</strong>
+                        <span>连载中</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>首发平台</strong>
+                        <span>漫画先锋</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>更新频率</strong>
+                        <span>每周三、六</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>阅读平台</strong>
+                        <span>Web / App</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>风格类型</strong>
+                        <span>热血 / 战争 / 冒险</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Chapter List -->
+            <section>
+                <div class="section-header">
+                    <h2 class="section-title">最新章节</h2>
+                    <a href="#" class="view-all">查看全部 &rarr;</a>
+                </div>
+                <div class="chapter-list">
+                    <a href="#" class="chapter-item">
+                        <div class="chapter-info">
+                            <span class="chapter-title">第240话：决战前夕的誓言</span>
+                            <span class="chapter-meta">2023-10-25 · 3.2MB</span>
+                        </div>
+                        <span class="chapter-status read">已完结</span>
+                    </a>
+                    <a href="#" class="chapter-item">
+                        <div class="chapter-info">
+                            <span class="chapter-title">第239话：背水一战</span>
+                            <span class="chapter-meta">2023-10-18 · 3.1MB</span>
+                        </div>
+                        <span class="chapter-status">连载中</span>
+                    </a>
+                    <a href="#" class="chapter-item">
+                        <div class="chapter-info">
+                            <span class="chapter-title">第238话：破碎的防线</span>
+                            <span class="chapter-meta">2023-10-11 · 2.9MB</span>
+                        </div>
+                        <span class="chapter-status">连载中</span>
+                    </a>
+                    <a href="#" class="chapter-item">
+                        <div class="chapter-info">
+                            <span class="chapter-title">第237话：新的盟友</span>
+                            <span class="chapter-meta">2023-10-04 · 3.0MB</span>
+                        </div>
+                        <span class="chapter-status">连载中</span>
+                    </a>
+                    <a href="#" class="chapter-item">
+                        <div class="chapter-info">
+                            <span class="chapter-title">第236话：迷雾中的信号</span>
+                            <span class="chapter-meta">2023-09-27 · 2.8MB</span>
+                        </div>
+                        <span class="chapter-status">连载中</span>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Recommendation -->
+            <section>
+                <div class="section-header">
+                    <h2 class="section-title">同类推荐</h2>
+                    <a href="#" class="view-all">更多推荐 &rarr;</a>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 20px;">
+                    <a href="#" class="card">
+                        <div style="background:#ddd; height:200px; border-radius:4px; margin-bottom:10px; display:flex; align-items:center; justify-content:center; color:#999;">
+                            [封面占位]
+                        </div>
+                        <h4 style="font-size:1rem; color:var(--text-main);">钢铁洪流</h4>
+                        <span style="font-size:0.8rem; color:var(--text-sub);">战争 / 热血</span>
+                    </a>
+                    <a href="#" class="card">
+                        <div style="background:#ddd; height:200px; border-radius:4px; margin-bottom:10px; display:flex; align-items:center; justify-content:center; color:#999;">
+                            [封面占位]
+                        </div>
+                        <h4 style="font-size:1rem; color:var(--text-main);">荣耀战魂</h4>
+                        <span style="font-size:0.8rem; color:var(--text-sub);">动作 / 冒险</span>
+                    </a>
+                    <a href="#" class="card">
+                        <div style="background:#ddd; height:200px; border-radius:4px; margin-bottom:10px; display:flex; align-items:center; justify-content:center; color:#999;">
+                            [封面占位]
+                        </div>
+                        <h4 style="font-size:1rem; color:var(--text-main);">边境防线</h4>
+                        <span style="font-size:0.8rem; color:var(--text-sub);">军事 / 剧情</span>
+                    </a>
+                </div>
+            </section>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <!-- Characters -->
+            <div class="widget">
+                <h3 class="widget-title">主要角色</h3>
+                <div class="character-grid">
+                    <div class="char-card">
+                        <div class="char-avatar">
+                            <img src="https://picsum.photos/seed/hero1/100/100" alt="林峰">
+                        </div>
+                        <span class="char-name">林峰</span>
+                    </div>
+                    <div class="char-card">
+                        <div class="char-avatar">
+                            <img src="https://picsum.photos/seed/hero2/100/100" alt="苏婉">
+                        </div>
+                        <span class="char-name">苏婉</span>
+                    </div>
+                    <div class="char-card">
+                        <div class="char-avatar">
+                            <img src="https://picsum.photos/seed/hero3/100/100" alt="雷震">
+                        </div>
+                        <span class="char-name">雷震</span>
+                    </div>
+                    <div class="char-card">
+                        <div class="char-avatar">
+                            <img src="https://picsum.photos/seed/hero4/100/100" alt="老张">
+                        </div>
+                        <span class="char-name">老张</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tags -->
+            <div class="widget">
+                <h3 class="widget-title">热门标签</h3>
+                <div class="tags-cloud">
+                    <a href="#" class="tag">军事战争</a>
+                    <a href="#" class="tag">热血战斗</a>
+                    <a href="#" class="tag">特工</a>
+                    <a href="#" class="tag">特种兵</a>
+                    <a href="#" class="tag">兄弟情义</a>
+                    <a href="#" class="tag">剧情向</a>
+                </div>
+            </div>
+
+            <!-- Ad Placeholder -->
+            <div class="widget" style="background: #e0e0e0; height: 250px; display: flex; align-items: center; justify-content: center; color: #999;">
+                广告位
+            </div>
+        </aside>
+    </div>
+</main>
+
+<footer>
+    <div class="footer-content">
+        <h3>漫画先锋</h3>
+        <div class="footer-links">
+            <a href="#">关于我们</a>
+            <a href="#">免责声明</a>
+            <a href="#">联系合作</a>
+            <a href="#">用户协议</a>
+        </div>
+        <p class="copyright">
+            Copyright &copy; 2023 漫画先锋. All Rights Reserved.<br>
+            本站内容仅供学习交流，请于下载后24小时内删除。
+        </p>
+    </div>
+</footer>
+
+<script>
+    function toggleMenu() {
+        const nav = document.getElementById('main-nav');
+        nav.classList.toggle('active');
+    }
+
+    // 简单的交互反馈
+    document.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', function(e) {
+            // 阻止默认跳转，仅演示交互
+            e.preventDefault();
+            const text = this.innerText.trim();
+            if(text !== '查看全部 →' && text !== '更多推荐 →' && text !== '查看全部 →') {
+                // 实际应用中这里会跳转页面
+                console.log('Navigating to: ' + text);
+            }
+        });
+    });
+</script>
+
+</body>
+                      </html>
