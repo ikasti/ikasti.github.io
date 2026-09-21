@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="死灵术士服从指南：深入解析死灵法师与仆从的契约机制、建立忠诚度的方法、灵魂操控技巧以及伦理边界。提供从入门到精通的服从训练体系。">
+    <meta name="keywords" content="死灵术士服从, 死灵法师, 灵魂契约, 亡灵仆从, 魔法控制, 黑暗奇幻">
+    <title>死灵术士服从-灵魂契约与仆从控制指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --bg-deep: #0a0a0c;
+            --bg-panel: #141419;
+            --bg-card: #1c1c24;
+            --text-main: #e0e0e0;
+            --text-muted: #9ca3af;
+            --accent-gold: #c5a059;
+            --accent-purple: #8b5cf6;
+            --accent-red: #ef4444;
+            --border-color: #2d2d3a;
+            --font-serif: 'Georgia', 'Times New Roman', serif;
+            --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-deep);
+            color: var(--text-main);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--accent-gold);
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            color: var(--accent-gold);
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--accent-purple);
+            padding-left: 15px;
+        }
+
+        .text-center { text-align: center; }
+        .text-muted { color: var(--text-muted); }
+
+        /* Header */
+        header {
+            background: rgba(10, 10, 12, 0.95);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--accent-gold);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav a {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-gold);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            padding: 80px 0;
+            background: radial-gradient(circle at center, #1a1a24 0%, var(--bg-deep) 70%);
+            border-bottom: 1px solid var(--border-color);
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%238b5cf6' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+        }
+
+        h1 {
+            font-family: var(--font-serif);
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #fff, #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, var(--accent-purple), #6d28d9);
+            color: white;
+            border-radius: 4px;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(139, 92, 246, 0.5);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 1px solid var(--accent-gold);
+            color: var(--accent-gold);
+            box-shadow: none;
+            margin-left: 10px;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(197, 160, 89, 0.1);
+        }
+
+        /* Core Concepts */
+        .concepts {
+            padding: 80px 0;
+        }
+
+        .concept-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .concept-card {
+            background: var(--bg-panel);
+            border: 1px solid var(--border-color);
+            padding: 30px;
+            border-radius: 8px;
+            transition: border-color 0.3s;
+        }
+
+        .concept-card:hover {
+            border-color: var(--accent-purple);
+        }
+
+        .concept-icon {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--accent-purple);
+        }
+
+        .concept-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.25rem;
+        }
+
+        .concept-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Contract Section */
+        .contract-section {
+            background: var(--bg-panel);
+            padding: 80px 0;
+        }
+
+        .contract-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .contract-list {
+            list-style: none;
+        }
+
+        .contract-list li {
+            margin-bottom: 20px;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .contract-list li::before {
+            content: '✦';
+            position: absolute;
+            left: 0;
+            color: var(--accent-gold);
+        }
+
+        .contract-list strong {
+            display: block;
+            color: var(--text-main);
+            margin-bottom: 5px;
+        }
+
+        .contract-visual {
+            background: var(--bg-deep);
+            border: 1px solid var(--border-color);
+            padding: 40px;
+            border-radius: 4px;
+            text-align: center;
+            position: relative;
+        }
+
+        .soul-orb {
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle, #4c1d95 0%, #000 70%);
+            border-radius: 50%;
+            margin: 0 auto 30px;
+            box-shadow: 0 0 50px rgba(139, 92, 246, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            animation: pulse 3s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 30px rgba(139, 92, 246, 0.3); transform: scale(1); }
+            50% { box-shadow: 0 0 60px rgba(139, 92, 246, 0.6); transform: scale(1.05); }
+            100% { box-shadow: 0 0 30px rgba(139, 92, 246, 0.3); transform: scale(1); }
+        }
+
+        /* Training Stages */
+        .stages {
+            padding: 80px 0;
+        }
+
+        .stage-container {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .stage-item {
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+        }
+
+        .stage-number {
+            font-family: var(--font-serif);
+            font-size: 3rem;
+            color: rgba(255, 255, 255, 0.05);
+            font-weight: bold;
+            min-width: 60px;
+            line-height: 1;
+        }
+
+        .stage-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--accent-gold);
+        }
+
+        /* Warning / Ethical */
+        .warning-section {
+            background: rgba(239, 68, 68, 0.05);
+            border-top: 1px solid rgba(239, 68, 68, 0.2);
+            border-bottom: 1px solid rgba(239, 68, 68, 0.2);
+            padding: 60px 0;
+        }
+
+        .warning-box {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .warning-icon {
+            font-size: 3rem;
+            color: var(--accent-red);
+            margin-bottom: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--bg-panel);
+            padding: 60px 0 20px;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--text-main);
+            margin-bottom: 20px;
+            font-family: var(--font-serif);
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: 10px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            .nav-wrapper { flex-direction: column; height: auto; padding: 15px 0; }
+            nav ul { margin-top: 15px; gap: 15px; font-size: 0.9rem; }
+            .contract-layout { grid-template-columns: 1fr; }
+            .stage-item { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <div class="logo">
+                <span>☠</span> NecroCompliance
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#basics" class="active">基础理论</a></li>
+                    <li><a href="#contract">契约建立</a></li>
+                    <li><a href="#stages">服从训练</a></li>
+                    <li><a href="#ethics">伦理边界</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <h1>死灵术士服从：灵魂契约与绝对控制</h1>
+                <p>探索死灵法师与亡灵仆从之间深层的魔力链接。从契约签订到意志重塑，掌握让亡灵生物绝对服从的核心奥术与伦理考量。</p>
+                <div class="cta-group">
+                    <a href="#contract" class="btn">签订契约</a>
+                    <a href="#basics" class="btn btn-secondary">阅读指南</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Concepts -->
+        <section id="basics" class="concepts">
+            <div class="container">
+                <h2 class="section-title">核心理论：死灵控制学</h2>
+                <p class="text-muted">死灵术士服从并非简单的命令，而是一种基于魔力共鸣与意志对等的能量交换过程。理解以下三个核心要素是建立有效服从关系的基础。</p>
+                
+                <div class="concept-grid">
+                    <article class="concept-card">
+                        <div class="concept-icon">👁</div>
+                        <h3>灵魂锚点</h3>
+                        <p>亡灵生物在死亡时往往保留着强烈的执念。死灵术士必须找到这个执念作为“锚点”，将其转化为服从的指令接口。没有锚点，仆从只会是无意识的杀戮机器。</p>
+                    </article>
+                    <article class="concept-card">
+                        <div class="concept-icon">⛓</div>
+                        <h3>魔力枷锁</h3>
+                        <p>通过死灵法术在仆从的灵魂深处刻下符文。这不仅仅是束缚，更是一种魔力传输通道。术士可以随时通过这个通道汲取力量或注入修正指令，确保其行为符合术士意图。</p>
+                    </article>
+                    <article class="concept-card">
+                        <div class="concept-icon">⚖</div>
+                        <h3>意志共鸣</h3>
+                        <p>最强效的服从来自于术士与仆从灵魂层面的共鸣。当术士的意志足够强大且纯粹时，仆从会主动将自身的生存本能转化为对术士的绝对忠诚，形成“共生”关系。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contract Section -->
+        <section id="contract" class="contract-section">
+            <div class="container">
+                <h2 class="section-title text-center">灵魂契约：建立秩序</h2>
+                <div class="contract-layout">
+                    <div>
+                        <h3>契约建立的五个阶段</h3>
+                        <p class="text-muted" style="margin-bottom: 30px;">一份稳固的服从契约需要经过严谨的仪式流程，缺一不可。</p>
+                        <ul class="contract-list">
+                            <li>
+                                <strong>第一阶段：灵魂共鸣</strong>
+                                术士引导亡灵灵魂回归躯体，此时亡灵意识处于混乱状态，是植入基础指令的最佳时机。
+                            </li>
+                            <li>
+                                <strong>第二阶段：意志压制</strong>
+                                使用死灵法术强行压制亡灵生前的自我意识，使其思维模式转变为单一的执行模式。
+                            </li>
+                            <li>
+                                <strong>第三阶段：利益绑定</strong>
+                                设定服从的代价或奖励机制。例如：给予亡灵能量补给作为交换，或承诺其死后的安息。
+                            </li>
+                            <li>
+                                <strong>第四阶段：忠诚誓言</strong>
+                                通过血誓或灵魂誓言，将上述规则刻入灵魂深处，使其成为不可违背的本能。
+                            </li>
+                            <li>
+                                <strong>第五阶段：契约固化</strong>
+                                使用仪式性法阵或神器将契约封存，防止外部魔法干扰或亡灵反噬。
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="contract-visual">
+                        <div class="soul-orb">✦</div>
+                        <h4>契约节点激活中...</h4>
+                        <p class="text-muted" style="margin-top: 10px; font-size: 0.9rem;">灵魂枷锁已建立<br>忠诚度检测：100%</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stages Section -->
+        <section id="stages" class="stages">
+            <div class="container">
+                <h2 class="section-title">服从训练体系</h2>
+                <p class="text-muted">即使建立了契约，初期的仆从也可能表现出不可预测性。以下是标准化的服从训练流程。</p>
+                
+                <div class="stage-container">
+                    <div class="stage-item">
+                        <div class="stage-number">01</div>
+                        <div class="stage-content">
+                            <h3>基础指令服从</h3>
+                            <p class="text-muted">训练仆从对简单、直接的命令做出即时反应。例如“站立”、“跟随”、“攻击”。此阶段重点在于纠正其生前的战斗习惯，使其动作更加精准、克制。</p>
+                        </div>
+                    </div>
+                    <div class="stage-item">
+                        <div class="stage-number">02</div>
+                        <div class="stage-content">
+                            <h3>战术协同训练</h3>
+                            <p class="text-muted">让仆从理解术士的战斗意图。通过模拟战斗，训练仆从学会预判术士的动作，自动填补术士视野盲区或掩护术士的弱点。</p>
+                        </div>
+                    </div>
+                    <div class="stage-item">
+                        <div class="stage-number">03</div>
+                        <div class="stage-content">
+                            <h3>危机处理与自保</h3>
+                            <p class="text-muted">设定复杂的生存场景，测试仆从在术士失去战斗力时的反应。训练其优先保护术士，而非盲目冲锋或逃跑。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Warning / Ethics -->
+        <section id="ethics" class="warning-section">
+            <div class="container warning-box">
+                <div class="warning-icon">⚠</div>
+                <h2>伦理警告与风险控制</h2>
+                <p class="text-muted" style="margin: 20px 0; max-width: 700px;">
+                    死灵术士服从属于高阶黑暗魔法范畴。在使用此类力量时，必须严格遵守以下原则，否则将面临严重的反噬风险：
+                </p>
+                <ul class="contract-list" style="max-width: 700px; margin: 0 auto 30px auto; text-align: left;">
+                    <li><strong>禁止过度透支：</strong> 长期汲取仆从灵魂能量会导致其彻底崩溃化为虚无，届时契约将自行解体。</li>
+                    <li><strong>意志冲突处理：</strong> 如果仆从的灵魂力量超过术士，它可能会尝试反客为主。必须时刻保持魔力压制。</li>
+                    <li><strong>环境适应性：</strong> 不同种族、死因的亡灵对死灵魔法的敏感度不同，需定制化调整契约强度。</li>
+                </ul>
+                <p class="text-muted" style="font-size: 0.85rem;">
+                    *本指南仅供黑暗奇幻文学创作与游戏设定参考，请勿在现实世界中尝试任何相关行为。
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>NecroCompliance</h4>
+                    <p>致力于研究死灵魔法中的契约机制与精神控制理论。为黑暗法师提供最详尽的仆从管理指南。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>相关概念</h4>
+                    <ul>
+                        <li><a href="#">亡灵复苏</a></li>
+                        <li><a href="#">灵魂献祭</a></li>
+                        <li><a href="#">暗影魔法</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>法律声明</h4>
+                    <ul>
+                        <li><a href="#">免责条款</a></li>
+                        <li><a href="#">内容规范</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 NecroCompliance Guide. All rights reserved. 内容仅供虚构参考。</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
