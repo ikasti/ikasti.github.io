@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>奥妮克希亚 - 龙之公主与黑龙女王传说</title>
+    <meta name="description" content="奥妮克希亚（Onyxia）是暴雪娱乐《魔兽世界》中的标志性反派角色，龙之公主与黑龙女王。本站提供关于她的背景故事、角色设定、战斗攻略及在魔兽世界中的历史地位深度解析。">
+    <meta name="keywords" content="奥妮克希亚, 龙之公主, 黑龙女王, 魔兽世界, Onyxia, 龙族设定, 战斗攻略">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --bg-dark: #0a0a0f;
+            --bg-panel: #13131f;
+            --bg-card: #1c1c2e;
+            --text-main: #e0e0e0;
+            --text-muted: #9ca3af;
+            --accent-gold: #c69c6d;
+            --accent-purple: #8a2be2;
+            --accent-red: #d32f2f;
+            --border-color: #2d2d44;
+            --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-family);
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            color: var(--text-main);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--accent-gold);
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(10, 10, 15, 0.95);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-gold);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-muted);
+        }
+
+        nav a.active {
+            color: var(--accent-gold);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(to bottom, rgba(10,10,15,0.3), var(--bg-dark)), url('https://picsum.photos/seed/onyxia_dragon/1920/1080.jpg') center/cover no-repeat;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, transparent 0%, var(--bg-dark) 90%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            background: rgba(138, 43, 226, 0.2);
+            color: var(--accent-purple);
+            padding: 5px 12px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            margin-bottom: 20px;
+            border: 1px solid rgba(138, 43, 226, 0.4);
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.8);
+        }
+
+        .hero-desc {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--accent-gold);
+            color: #000;
+            font-weight: 700;
+            border-radius: 4px;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #d4af66;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 1px solid var(--text-muted);
+            color: var(--text-main);
+            margin-left: 15px;
+        }
+
+        .btn-outline:hover {
+            border-color: var(--text-main);
+            background-color: rgba(255,255,255,0.05);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 80px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .section-header {
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            width: 60px;
+            height: 4px;
+            background-color: var(--accent-gold);
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            color: var(--text-muted);
+        }
+
+        /* Grid Layouts */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        /* Cards */
+        .card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-gold);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background-color: #000;
+        }
+
+        .card-body {
+            padding: 25px;
+        }
+
+        .card-tag {
+            font-size: 0.8rem;
+            color: var(--accent-purple);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .card-text {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        /* Timeline / History */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--border-color);
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            margin-bottom: 50px;
+            position: relative;
+            width: 100%;
+        }
+
+        .timeline-content {
+            width: 45%;
+            padding: 20px;
+            background-color: var(--bg-panel);
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-left: auto;
+        }
+
+        .timeline-date {
+            font-size: 0.9rem;
+            color: var(--accent-gold);
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .timeline-title {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        /* Stats */
+        .stats-bar {
+            background: linear-gradient(90deg, #1c1c2e 0%, #13131f 100%);
+            padding: 60px 0;
+            margin-top: 40px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-main);
+            display: block;
+        }
+
+        .stat-label {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #050508;
+            padding: 60px 0 30px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-top: 15px;
+            max-width: 300px;
+        }
+
+        .footer-col h4 {
+            color: var(--text-main);
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col a {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .footer-col a:hover {
+            color: var(--accent-gold);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            color: #555;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                height: 400px;
+                text-align: center;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            nav {
+                display: none; /* Simplified for single file demo */
+            }
+
+            .header-inner {
+                justify-content: center;
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-content {
+                width: calc(100% - 60px);
+                margin-left: 60px !important;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">奥妮克希亚 <span>Onyxia</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#origin" class="active">起源</a></li>
+                    <li><a href="#role">角色设定</a></li>
+                    <li><a href="#history">历史战役</a></li>
+                    <li><a href="#guide">攻略指南</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <span class="hero-tag">魔兽世界 · 史诗级BOSS</span>
+                <h1>黑龙女王</h1>
+                <p class="hero-desc">作为龙之公主与黑龙军团的领袖，奥妮克希亚潜伏在暴风城暗处，以凡人贵族的身份操控着王国，等待着毁灭的号角。</p>
+                <div>
+                    <a href="#role" class="btn">探索传说</a>
+                    <a href="#guide" class="btn btn-outline">战斗指南</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <div class="stats-bar">
+            <div class="container grid-4">
+                <div class="stat-item">
+                    <span class="stat-number">百万+</span>
+                    <span class="stat-label">玩家见证</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">4.5万</span>
+                    <span class="stat-label">血量 (20人团)</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">12</span>
+                    <span class="stat-label">种强力技能</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">经典</span>
+                    <span class="stat-label">怀旧服常驻</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Origin / Background -->
+        <section id="origin">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">龙之公主的崛起</h2>
+                    <p class="section-subtitle">奥妮克希亚并非凡人，她是耐萨里奥（死亡之翼）与伊瑟拉（绿龙女王）的女儿，是黑龙军团中最杰出的战略家。</p>
+                </div>
+                
+                <div class="grid-3">
+                    <article class="card">
+                        <img src="https://picsum.photos/seed/onyxia_dream/400/300.jpg" alt="龙族血统" class="card-img">
+                        <div class="card-body">
+                            <span class="card-tag">血统</span>
+                            <h3 class="card-title">红龙与黑龙的混血</h3>
+                            <p class="card-text">作为耐萨里奥与伊瑟拉的女儿，奥妮克希亚继承了父亲狂暴的力量与母亲优雅的魔法天赋。她曾在黑石山接受训练，最终成为黑龙军团的代行者。</p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <img src="https://picsum.photos/seed/onyxia_politics/400/300.jpg" alt="政治阴谋" class="card-img">
+                        <div class="card-body">
+                            <span class="card-tag">阴谋</span>
+                            <h3 class="card-title">暴风城的傀儡</h3>
+                            <p class="card-text">为了执行耐萨里奥的阴谋，奥妮克希亚化身为人，在暴风城贵族圈中扮演关键角色。她利用暗影魔法操控人心，试图让人类自相残杀。</p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <img src="https://picsum.photos/seed/onyxia_scale/400/300.jpg" alt="黑鳞" class="card-img">
+                        <div class="card-body">
+                            <span class="card-tag">特征</span>
+                            <h3 class="card-title">不朽的黑鳞</h3>
+                            <p class="card-text">她的鳞片坚硬无比，能够抵御物理攻击和火焰伤害。作为黑龙，她与红龙不同，并不守护生命，而是象征着毁灭与威严。</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Role / Abilities -->
+        <section id="role" style="background-color: var(--bg-panel);">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">战斗能力解析</h2>
+                    <p class="section-subtitle">在魔兽世界的战斗中，奥妮克希亚展现了极高的威胁度，她的技能组合考验着团队的配合与减伤机制。</p>
+                </div>
+
+                <div class="grid-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <div style="font-size: 2rem; margin-bottom: 10px;">🔥</div>
+                            <h4 class="card-title">龙息吐息</h4>
+                            <p class="card-text">大范围火焰伤害，需要坦克频繁换位以分散仇恨。</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <div style="font-size: 2rem; margin-bottom: 10px;">🛡️</div>
+                            <h4 class="card-title">龙鳞护甲</h4>
+                            <p class="card-text">大幅减少受到的伤害，通常会由法师打破或通过装备提升覆盖。</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <div style="font-size: 2rem; margin-bottom: 10px;">🧲</div>
+                            <h4 class="card-title">死亡缠绕</h4>
+                            <p class="card-text">单体暗影伤害并治疗BOSS，治疗职业需注意打断或控制。</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <div style="font-size: 2rem; margin-bottom: 10px;">🌀</div>
+                            <h4 class="card-title">击飞</h4>
+                            <p class="card-text">将玩家击飞至空中，需要团队在空中进行伤害输出。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- History / Timeline -->
+        <section id="history">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">历史战役</h2>
+                    <p class="section-subtitle">从黑石山到暴风城，奥妮克希亚的一生是魔兽世界历史上最著名的篇章之一。</p>
+                </div>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-date">上古之战时期</div>
+                            <h4 class="timeline-title">龙族之战</h4>
+                            <p class="card-text">在耐萨里奥堕落并成为死亡之翼后，奥妮克希亚继续忠诚地执行父亲的计划，成为黑龙军团的指挥官之一。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-date">魔兽世界旧版本</div>
+                            <h4 class="timeline-title">黑石山战役</h4>
+                            <p class="card-text">联盟与部落冒险者组成小队，潜入黑石深渊。在经历了无数失败后，最终在黑石山的巢穴中击败了奥妮克希亚。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-date">大地的裂变</div>
+                            <h4 class="timeline-title">重生与毁灭</h4>
+                            <p class="card-text">死亡之翼苏醒，黑龙军团陷入混乱。奥妮克希亚试图重获自由，但最终在红龙军团的攻势下陨落，她的尸体成为了红龙女王伊瑟拉疗伤的祭品。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guide / FAQ -->
+        <section id="guide" style="background-color: var(--bg-panel);">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">新手攻略与FAQ</h2>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+                    <div>
+                        <h3 style="margin-bottom: 20px; color: var(--accent-gold);">核心机制要点</h3>
+                        <ul style="list-style: none; color: var(--text-muted);">
+                            <li style="margin-bottom: 15px; padding-left: 20px; border-left: 2px solid var(--accent-purple);">坦克必须时刻关注仇恨，避免OT（仇恨失控）。</li>
+                            <li style="margin-bottom: 15px; padding-left: 20px; border-left: 2px solid var(--accent-purple);">分散站位是应对龙息吐息的关键。</li>
+                            <li style="margin-bottom: 15px; padding-left: 20px; border-left: 2px solid var(--accent-purple);">注意打断死亡缠绕，防止BOSS回血。</li>
+                            <li style="margin-bottom: 15px; padding-left: 20px; border-left: 2px solid var(--accent-purple);">团队需要应对击飞阶段，保证输出最大化。</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 style="margin-bottom: 20px; color: var(--accent-gold);">常见问题</h3>
+                        <div style="margin-bottom: 20px;">
+                            <h4 style="color: var(--text-main); margin-bottom: 5px;">Q: 奥妮克希亚掉落什么装备？</h4>
+                            <p style="font-size: 0.9rem; color: var(--text-muted);">A: 击杀她通常掉落紫色的史诗级装备，以及黑龙徽章等任务物品。</p>
+                        </div>
+                        <div style="margin-bottom: 20px;">
+                            <h4 style="color: var(--text-main); margin-bottom: 5px;">Q: 需要多少玩家才能击杀？</h4>
+                            <p style="font-size: 0.9rem; color: var(--text-muted);">A: 在最初的版本中通常需要20人团队，但在后续版本中难度有所调整，通常为10人或25人团。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">奥妮克希亚 <span>Onyxia</span></div>
+                    <p>致力于记录魔兽世界中黑龙女王的传说、技能解析与历史战役。为玩家提供最详尽的战斗指南与背景故事。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#origin">起源故事</a></li>
+                        <li><a href="#role">角色能力</a></li>
+                        <li><a href="#history">历史战役</a></li>
+                        <li><a href="#guide">战斗攻略</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>相关角色</h4>
+                    <ul>
+                        <li><a href="#">耐萨里奥 (死亡之翼)</a></li>
+                        <li><a href="#">伊瑟拉 (绿龙女王)</a></li>
+                        <li><a href="#">红龙军团</a></li>
+                        <li><a href="#">黑石山</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关于本站</h4>
+                    <ul>
+                        <li><a href="#">免责声明</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">联系我们</a></li>
+                        <li><a href="#">加入社区</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 奥妮克希亚传说档案馆. All Rights Reserved. 非官方网站，仅供资料整理与学习使用。</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
